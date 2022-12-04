@@ -56,10 +56,7 @@ const [product, setProduct] = useState({
 
             <button>{
               router.query.id ? 'update product' : 'Agregar product'
-            }
-            </button>
-
-            
+            }</button> 
         </form>
     </div>
   )
