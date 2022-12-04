@@ -15,6 +15,7 @@ const getProduct = async (req, res) => {
     const [result] = await pool.query('SELECT * FROM `donTito`')
     return res.status(200).json(result)
 }
+
 const saveProduct = async (req, res) => {
     console.log("INSERT =>");
     const {id, name, cientos, costo} = req.body
