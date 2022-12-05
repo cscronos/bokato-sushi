@@ -1,7 +1,6 @@
 import {pool} from '../../../config/db'
 
 export default async function handler(req, res){
-
     switch (req.method) {
         case 'GET':
             return await getProduct(req, res)
@@ -28,10 +27,10 @@ const deleteProduct = async (req, res) => {
 
 const updateProduct = async (req, res) => {
     const {id} = req.query
-    const {name, cientos, costo} = req.body
+    const {name, src , cientos, costo} = req.body
     // console.log(name, cientos, costo , id);
     try {
-        await pool.query("UPDATE donTito SET name=? ,cientos=? ,costo=? WHERE id = ?", [name, cientos, costo , id])
+        await pool.query("UPDATE donTito SET name=?, src=? ,cientos=? ,costo=? WHERE id = ?", [name, src , cientos, costo , id])
         return res.status(204).json()   
     } catch (error) {
         console.log(error.message);

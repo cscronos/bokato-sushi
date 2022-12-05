@@ -1,0 +1,62 @@
+.contenedor {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(31, 33, 33);
+}
+
+.tarjetas {
+    border-radius: 5px;
+    box-shadow: rgba(66, 66, 66, 0.5)5px 3px 5px 0px ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: bisque;
+}
+.editar {
+    border-radius: 5px;
+    
+    padding: 0.5rem;
+    border: none;
+    background-color: red;
+}
+
+.editar:hover {
+    background-color: rgb(65, 6, 6);
+    cursor: pointer;
+}
+
+.agregar {
+    border-radius: 5px;
+    
+    padding: 0.5rem;
+    border: none;
+    background-color: rgb(91, 210, 87);
+}
+
+.agregar:hover {
+    background-color: rgb(14, 33, 10);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1020px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media only screen and (max-width: 770px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media only screen and (max-width: 522px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    }
+
+}

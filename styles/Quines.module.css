@@ -1,0 +1,61 @@
+.quienessomos {
+    background: url(../public/img/fondo2-1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+}
+
+.div_quienessomos {
+    display: flex;
+    box-shadow: 0px 0px 15px 1px black;
+    border-radius: 10px;
+    padding: 40px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 0.6) 48%,
+        rgba(148, 187, 233, 0.6) 100%
+    );
+    /* background-color: rgba(51, 51, 51, 0.781); */
+    min-height: 100vh;
+    color: white;
+}
+
+.div_historia {
+    flex: 50%;
+    padding: 20px;
+
+    color: black;
+    background-color: rgba(235, 235, 235, 0.308);
+    text-align: right;
+}
+
+.div_historia h1,
+.div_historia h2,
+.div_historia p {
+    padding-bottom: 10px;
+}
+.div_equipo {
+    flex: 50%;
+    padding: 20px;
+    background-color: rgba(31, 31, 31, 0.425);
+    text-align: left;
+}
+
+.div_equipo h1,
+.div_equipo h2,
+.div_equipo p {
+    padding-bottom: 10px;
+}
+
+.div_equipo img {
+    width: 200px;
+}
+
+.div_present {
+    display: flex;
+}
+
+.mati,
+.cris {
+    flex: 50%;
+}

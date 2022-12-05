@@ -18,10 +18,11 @@ const getProduct = async (req, res) => {
 
 const saveProduct = async (req, res) => {
     console.log("INSERT =>");
-    const {id, name, cientos, costo} = req.body
+    const {id, name, src, cientos, costo} = req.body
     const [result] = await pool.query('INSERT INTO donTito set ?',{
         id,
         name,
+        src: "/imgP/" + src + ".jpg",
         cientos,
         costo,
     })

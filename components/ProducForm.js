@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import styles from "../styles/Form.module.css";
 
 export function ProducForm() {
 
 const [product, setProduct] = useState({
     name: "",
+    src: "",
     cientos: 0,
     costo: 0,
   })
@@ -16,7 +18,7 @@ const [product, setProduct] = useState({
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-
+    const hola = document.getElementById('hola')
     if (router.query.id) {
       console.log('PUT');
       await axios.put('/api/products/' + router.query.id , product)
@@ -24,7 +26,8 @@ const [product, setProduct] = useState({
       console.log('POST');
       await axios.post('/api/products', product)
     }
-    router.push('/') 
+    router.push('/new')
+    hola.reset();
   }
 
   const handleChange = ({target: {name, value}}) => {
@@ -43,18 +46,21 @@ const [product, setProduct] = useState({
   }, [])
 
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
+    <div className={styles.contenedor}>
+        <form className={styles.cont_form} onSubmit={handleSubmit} id="hola">
             <label htmlFor='name'>Name produc:</label>
-            <input type="text" name='name' onChange={handleChange} value={product.name}/>
+            <input className={styles.input} type="text" name='name' onChange={handleChange} value={product.name}/>
+
+            <label htmlFor='src'>Link Img:</label>
+            <input className={styles.input} type="text" name='src' onChange={handleChange} value={product.src}/>
 
             <label htmlFor='cientos'>Cantidad:</label>
-            <input type="text" name='cientos' id="cantidad" onChange={handleChange} value={product.cientos}/>
+            <input className={styles.input}  type="text" name='cientos' id="cantidad" onChange={handleChange} value={product.cientos}/>
 
             <label htmlFor='costo'>costo:</label>
-            <input type="text" name='costo' onChange={handleChange} value={product.costo}/>
+            <input className={styles.input} type="text" name='costo' onChange={handleChange} value={product.costo}/>
 
-            <button>{
+            <button className={styles.button}>{
               router.query.id ? 'update product' : 'Agregar product'
             }</button> 
         </form>

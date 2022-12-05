@@ -1,11 +1,10 @@
 import PageLayout from "../components/PageLayout.jsx";
 import PageBrijida from "../components/Home.jsx";
-import axios from "axios";
-import Link from "next/link.js";
 
-export default function Home({products}) {
+
+export default function Home() {
     return (
-        <PageLayout title="NewsApp - Home">
+        <PageLayout title="Bokato - Home">
             {/* MAIN */}
             <div>
                 <PageBrijida></PageBrijida>

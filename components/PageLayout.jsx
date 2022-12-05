@@ -15,7 +15,7 @@ export default function PageLayout({ children, title }) {
             <header>
                 <nav className={styles.navbar}>
                     <Link className={styles.navbarlink} href="/">Home</Link>
-                    <Link className={styles.navbarlink} href="/contact">Productos</Link>
+                    <Link className={styles.navbarlink} href="/productos">Productos</Link>
                     <Link className={styles.navbarlink} href="/quienes">Quienes somos</Link>
                     <Link className={styles.navbarlink} href="/new">Contacto</Link>
                 </nav>
