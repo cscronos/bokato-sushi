@@ -20,7 +20,7 @@ function productos({products}) {
             <div className={styLista.contenedor}>
                 {products.map(post => (
                 <div className={styLista.tarjetas} key={post.id}>
-                    <p>{post.name}</p>
+                    <h3>{post.name}</h3>
                     <Image src={post.src} alt="foto mati" width={200} height={200}/>
                     <p>Precio: ${post.costo}</p>
                     <button className={styLista.agregar} onClick={() => saltoProduc(post.id)}>Detalles</button>

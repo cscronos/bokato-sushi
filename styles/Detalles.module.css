@@ -1,0 +1,13 @@
+.contenedor {
+    display: flex;
+    margin: 20px;
+}
+
+.imagen {
+    flex: 20%;
+    
+}
+.info {
+    flex: 80%;
+    color: white;
+}

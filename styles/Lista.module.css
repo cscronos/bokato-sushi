@@ -2,11 +2,12 @@
     display: grid;
     grid-gap: 1rem;
     padding: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: rgb(31, 33, 33);
 }
 
 .tarjetas {
+    width: 200px;
     border-radius: 5px;
     box-shadow: rgba(66, 66, 66, 0.5)5px 3px 5px 0px ;
 
@@ -14,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
-    background-color: bisque;
+    background-color: rgb(209, 209, 209);
 }
 .editar {
     border-radius: 5px;
@@ -27,6 +28,7 @@
 .editar:hover {
     background-color: rgb(65, 6, 6);
     cursor: pointer;
+    color: white;
 }
 
 .agregar {
@@ -40,6 +42,7 @@
 .agregar:hover {
     background-color: rgb(14, 33, 10);
     cursor: pointer;
+    color: white;
 }
 
 @media only screen and (max-width: 1020px) {
